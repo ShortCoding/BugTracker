@@ -13,9 +13,7 @@ export class Kanban extends Component {
 
     render() {
         return (
-            <div>
                 <Todoboard />
-            </div>
         )
     }
 }

@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faFilter} from "@fortawesome/free-solid-svg-icons/faFilter";
+import {faPlus} from "@fortawesome/free-solid-svg-icons/faPlus";
 
 export class Bugs extends Component {
 
@@ -6,15 +9,30 @@ export class Bugs extends Component {
     
     constructor(props) {
         super(props);
+        this.handleCreateBug = this.handleCreateBug.bind(this);
     }
 
     componentDidMount() {
     }
 
+    handleCreateBug(e) {
+        e.preventDefault();
+        this.props.history.push('/bugs/create-a-bug');
+    }
+    
     render() {
         return (
-            <div>
-                <table className="table bg-light ">
+            <div> 
+                <div className="mb-2 d-flex flex-row align-items-center">
+                        <span className="mr-1"> Filters </span> 
+                        <FontAwesomeIcon icon={faFilter} style={{ fontSize : '18px', color:'#262A2E'}} />
+                        <button className="btn btn-primary ml-auto" 
+                               onClick={this.handleCreateBug}>
+                            <FontAwesomeIcon icon={faPlus} className="mr-2"/>
+                            Create bug
+                        </button>
+                </div>
+                <table className="table bg-light table-hover ">
                     <thead>
                     <tr>
                         <th scope="col"> # ID </th>
@@ -45,4 +63,6 @@ export class Bugs extends Component {
             </div>
         )
     }
+
+
 }

@@ -15,7 +15,7 @@ export class Login extends Component {
   render () {
     
     return (
-      <div>
+      <React.Fragment>
           <div className="card card-wrapper card-signin flex-row">
               <div className="card-img-left d-none d-md-flex"> </div>
               <div className="card-body">
@@ -24,7 +24,7 @@ export class Login extends Component {
                       : <SignIn history= {this.props.history} switchToRegister={() => this.handleSwitchComponent()}/>  }
               </div>
           </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

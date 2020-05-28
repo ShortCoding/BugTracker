@@ -147,27 +147,29 @@ body {
 }
 
 .sidebarWrapper{
-  background: #3b5998;
+  background: #262A2E;
   position: fixed;
   top: 0;
   width : 200px;
   min-height: 100%;
-  padding: 1rem 0.5rem 2rem;
+  padding: 0rem 0rem 2rem;
   border-right: 1px solid #00000010;
 }
 
 .navListItem{
-  padding: 0.75rem;
   text-decoration: none;
+  font-weight: 300;
+  .itemContent{
+    padding: 0.8rem 0.6rem;
+  }
 }
 
 .navListItem .active{
-  background: #3aafffa1;
-  border-left: 4px solid #3aafff;
-  padding: 0.75rem;
+  background: #7575753b;
+  border-left: 4px solid #757575;
 }
 .navListItem:hover{
-  background: #00000010;
+  background: #7575753b;
 }
 
 .navbarWrapper{
@@ -175,7 +177,6 @@ body {
   top: 0;
   right: 0;
   width: calc(100vw - 200px);
-  background: bisque;
 }
 
 .content{
@@ -196,13 +197,29 @@ a:-webkit-any-link{
   
 }
 
+.navbar{
+  padding: 1rem 0.75rem;
+  position: fixed;
+  right: 0;
+  left: 200px;
+  z-index: 4;
+  box-shadow: 1px 1px 5px gray;
+
+}
+
 .logoSidebar{
     font-size: 17px;
     font-weight: bold;
+    padding: 1rem 0;
+    width: 100%;
 }
 
 select{
   border-radius : 2rem;
+}
+
+.kanbanWrapper{
+  background-color: #757575;
 }
 
 @media(max-width: 500px ) {

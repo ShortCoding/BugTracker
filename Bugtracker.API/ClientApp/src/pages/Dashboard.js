@@ -2,6 +2,25 @@ import React, { Component } from 'react';
 import {Sidebar} from "../components/Sidebar";
 import {TopNavbar} from "../components/TopNavbar";
 import {DropdownMenu} from "reactstrap";
+import { Doughnut } from 'react-chartjs-2';
+
+const data = {
+    labels: [
+        'New',
+        'Reopened',
+        'Solved'
+    ],
+    datasets: [{
+        data: [300, 100, 100],
+        backgroundColor: [
+            'lightgreen',
+            '#36A2EB',
+            '#FFCE56'
+        ],
+    }]
+};
+
+
 
 export class Dashboard extends Component{
     static displayName = Dashboard.name;
@@ -23,11 +42,12 @@ export class Dashboard extends Component{
             return <option value="" key={key}>{project}</option>; 
         });
         
+        
         return (
             <div className="container-fluid">
                 
                 <div className="form-inline mb-3">
-                    <h3 > Dashboard </h3>
+                    <h4> Dashboard </h4>
                     <label className="mr-2 ml-auto" htmlFor="projects">Select the project : </label>
                     <select className="form-control w-25" id="projects">
                         {projects}
@@ -35,49 +55,24 @@ export class Dashboard extends Component{
                 </div>
                 
                 <div className="row">
-                    <div className="col">
-                        <div className="card">
-                            <div className="card-header">
-                                Overview
-                            </div>
-                            <div className="card-body">
-                                
+                    <div className="col-3">
+                        <div className="card" >
+                            <div className="card-body" >
+                                <h4> Overview</h4>
+                                <Doughnut  data={data}
+                                           height={250} />
                             </div>
                         </div>
                     </div>
                     <div className="col">
                         <div className="card">
-                            <div className="card-header">
-                                Reporting
-                            </div>
                             <div className="card-body">
-                                
+                                Stats
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="row my-3">
-                    <div className="col">
-                        <div className="card">
-                            <div className="card-header">
-                                Backlog
-                            </div>
-                            <div className="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col">
-                        <div className="card">
-                            <div className="card-header">
-                                Aging defects 
-                            </div>
-                            <div className="card-body">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         );
     }

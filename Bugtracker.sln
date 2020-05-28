@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bugtracker.Core", "Bugtrack
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bugtracker.Infrastructure", "Bugtracker.Infrastructure\Bugtracker.Infrastructure.csproj", "{A1F8F6C3-54D2-47AD-85C0-DD36786DF75B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bugtracker.Test", "Bugtracker.Test\Bugtracker.Test.csproj", "{DD11288B-D806-467C-9F08-7D57370B32E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{A1F8F6C3-54D2-47AD-85C0-DD36786DF75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1F8F6C3-54D2-47AD-85C0-DD36786DF75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1F8F6C3-54D2-47AD-85C0-DD36786DF75B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD11288B-D806-467C-9F08-7D57370B32E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD11288B-D806-467C-9F08-7D57370B32E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD11288B-D806-467C-9F08-7D57370B32E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD11288B-D806-467C-9F08-7D57370B32E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

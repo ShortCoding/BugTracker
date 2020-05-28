@@ -1,17 +1,20 @@
 import React, {Component} from 'react';
+// import {connect} from 'react-redux';
+// import {userLoginFetch} from '../redux/actions';
 
  
 export class SignIn extends Component {
     
     constructor(props) {
         super(props);
+        
         this.state = {
             username : '',
             password : ''
         }
+        
         this.handleOnChange = this.handleOnChange.bind(this);
         this.handleOnSubmit = this.handleOnSubmit.bind(this);
-        
     }
     
     handleOnChange(e){
@@ -21,9 +24,10 @@ export class SignIn extends Component {
 
     handleOnSubmit(e){
         e.preventDefault();
-        console.log(this.state.username, ' ', this.state.password);
-        this.props.history.push('/dashboard');
+        // this.props.history.push('/dashboard');
+        // this.props.userLoginFetch(this.state)
     }
+
     
     render(){
         return (
@@ -66,3 +70,9 @@ export class SignIn extends Component {
         );
     }
 }
+//
+// const mapDispatchToProps = dispatch => ({
+//     userLoginFetch: userInfo => dispatch(userLoginFetch(userInfo))
+// })
+//
+// export default connect(null, mapDispatchToProps)(SignIn);

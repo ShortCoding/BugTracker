@@ -16,34 +16,35 @@ export class Sidebar extends Component{
     
     render() {
         return (
-            <div>
-                <div className="sidebarWrapper bg-light d-flex flex-column">
-                    <div className="logoSidebar mx-auto">
+            <div className="">
+                <div className="sidebarWrapper d-flex flex-column">
+                    <div className="logoSidebar bg-light">
                         <Link to="/">
-                            <img src={logo} alt="react-logo" height="35" />
-                            <span> Bugtracker </span>
+                            <div className="mx-auto w-75">
+                                <img src={logo} alt="react-logo" height="35" />
+                                <span> Bugtracker </span>
+                            </div>
                         </Link>
                     </div>
-                    <hr />
-                    <ul className="navList list-unstyled mt-4">
-                        <li className="navListItem my-1" >
-                           <NavLink to="/dashboard"  activeClassName="active" >
-                               <FontAwesomeIcon icon={faTachometerAlt} size="lg" className="mr-2"/> Dashboard
-                           </NavLink>
+                    <ul className="navList list-unstyled mt-2 text-white">
+                        <li className="navListItem my-1">
+                            <NavLink to="/dashboard" className="itemContent" activeClassName="active" >
+                                <FontAwesomeIcon icon={faTachometerAlt} size="lg" className="mr-2"/> Dashboard
+                            </NavLink>
                         </li>
                         <li className="navListItem my-1">
-                            <NavLink to="/kanban" activeClassName="active" >
+                            <NavLink to="/kanban" className="itemContent"  activeClassName="active" >
                                 <FontAwesomeIcon icon={faColumns} size="lg" className="mr-2"/> Kanban board
                             </NavLink>
                         </li>
                         <li className="navListItem my-1">
-                            <NavLink to="/bugs" activeClassName="active" >
+                            <NavLink to="/bugs" className="itemContent"  activeClassName="active" >
                                 <FontAwesomeIcon icon={faBug} size="lg" className="mr-2"/> Bugs
                             </NavLink>
 
                         </li>
                         <li className="navListItem my-1">
-                            <NavLink to="/calendar" activeClassName="active" >
+                            <NavLink to="/calendar" className="itemContent"  activeClassName="active">
                                 <FontAwesomeIcon icon={faCalendar} size="lg" className="mr-2"/> Calendar
                             </NavLink>
                         </li>

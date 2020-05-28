@@ -11,6 +11,7 @@ import {Calendar} from "./pages/Calendar";
 import {Settings} from "./pages/Settings";
 import {Profile} from "./pages/Profile";
 import {Bugs} from "./pages/Bugs";
+import {CreateBug} from "./pages/CreateBug";
 
 export default class App extends Component {
   static displayName = App.name;
@@ -26,6 +27,7 @@ export default class App extends Component {
               <Route exact path='/calendar' component={Calendar}/>
               <Route exact path='/settings' component={Settings}/>
               <Route exact path='/profile' component={Profile}/>
+              <Route exact path='/bugs/create-a-bug' component={CreateBug}/>
               <Route path='*' component={Error}/>
           </Switch>
       </Layout>
